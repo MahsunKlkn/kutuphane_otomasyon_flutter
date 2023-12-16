@@ -56,7 +56,7 @@ class _KitapListesiState extends State<KitapListesi> {
                 subtitle: yazarBilgisi,
                 documentId: kitaplar[index]['documentId'],
                 onDelete: () {
-                  // Silme işlemi tamamlandığında bu callback fonksiyonu çağırarak Card'ı silebiliriz.
+                  // Silme işlemi tamamlandığında bu  Card'ı silebiliriz.
                   setState(() {
                     kitaplar.removeAt(index);
                   });
@@ -95,7 +95,7 @@ class _KitapListesiState extends State<KitapListesi> {
         ],
         selectedItemColor: Colors.purple,
         onTap: (index) {
-          // İlgili sekmeye tıklanınca yapılacak işlemleri buraya ekleyebilirsiniz.
+          // İlgili sekmeye tıklanınca yapılacak işlemleri buraya ekleriz
         },
       ),
     );

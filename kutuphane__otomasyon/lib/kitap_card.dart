@@ -85,7 +85,6 @@ class _KitapCardState extends State<KitapCard> {
       print('Kitap başarıyla silindi.');
     } catch (e) {
       print('Hata oluştu: $e');
-      // Handle the error (e.g., show a snackbar or alert dialog)
     }
   }
 }

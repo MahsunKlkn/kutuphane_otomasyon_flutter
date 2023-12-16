@@ -20,21 +20,6 @@ class FirestoreIslemler {
     });
   }
 
-  //AŞAĞIDAKİ KODDA true olanları getiremiyordum yukarıda düzelttim
-  /*
-  Stream<List<Map<String, dynamic>>> kitapGetir() {
-    return kitaplar.snapshots().map((snapshot) {
-      return snapshot.docs.map((doc) {
-        return {
-          'documentId': doc.id,
-          'kitapAdi': doc['kitapAdi'] ?? '',
-          'yazarlar': doc['yazarlar'] ?? '',
-          'sayfaSayisi': doc['sayfaSayisi'] ?? 0,
-        };
-      }).toList();
-    });
-  }
-*/
   Future<void> veriEklemeAdd({
     required String kitapAdi,
     required String yayinEvi,
@@ -68,7 +53,6 @@ class FirestoreIslemler {
     required bool yayinlanacakMi,
   }) async {
     if (documentId.isEmpty) {
-      // Handle the case where documentId is empty
       print('Error: DocumentId is empty.');
       return;
     }
@@ -104,7 +88,6 @@ class FirestoreIslemler {
       }
     } catch (e) {
       print('Hata oluştu: $e');
-      // Handle the error (e.g., show a snackbar or alert dialog)
     }
   }
 }

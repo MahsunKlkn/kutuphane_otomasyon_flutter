@@ -41,7 +41,6 @@ class _KitapEkleState extends State<KitapEkle> {
         print('Kitap başarıyla güncellendi.');
       }).catchError((error) {
         print('Hata oluştu: $error');
-        // Handle the error (e.g., show a snackbar or alert dialog)
       });
     }
   }
@@ -205,7 +204,7 @@ class _KitapEkleState extends State<KitapEkle> {
                     )
                         .then((_) {
                       print('Kitap başarıyla güncellendi.');
-                      // Clear text controllers and pop context after successful update
+
                       kitapAdi.clear();
                       yayinEvi.clear();
                       yazarlar.clear();
@@ -213,7 +212,6 @@ class _KitapEkleState extends State<KitapEkle> {
                       basimYili.clear();
                     }).catchError((error) {
                       print('Hata oluştu: $error');
-                      // Handle the error (e.g., show a snackbar or alert dialog)
                     });
                     Navigator.pop(context);
                   } else {
@@ -230,7 +228,7 @@ class _KitapEkleState extends State<KitapEkle> {
                     )
                         .then((_) {
                       print('Kitap başarıyla eklendi.');
-                      // Clear text controllers and pop context after successful addition
+
                       kitapAdi.clear();
                       yayinEvi.clear();
                       yazarlar.clear();
@@ -238,7 +236,6 @@ class _KitapEkleState extends State<KitapEkle> {
                       basimYili.clear();
                     }).catchError((error) {
                       print('Hata oluştu: $error');
-                      // Handle the error (e.g., show a snackbar or alert dialog)
                     });
                     Navigator.pop(context);
                   }
